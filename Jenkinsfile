@@ -1,7 +1,8 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.81:5000/justme/myweb"
+    registry = "chetangautamm/repo"
+    registryCredential = '58881f31-29bb-48a8-9da9-fc254654146d' 
     dockerImage = ""
   }
 
