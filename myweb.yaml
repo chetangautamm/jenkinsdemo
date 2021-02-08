@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: chetangautamm/repo:11
+      - image: chetangautamm/repo:":$BUILD_NUMBER"
         imagePullPolicy: Always
         name: myweb
 
