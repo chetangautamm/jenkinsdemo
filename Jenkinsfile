@@ -19,7 +19,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry 
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
@@ -46,6 +46,11 @@ pipeline {
             }
           }
         }              
+      }
+    }
+    stage('Remove Unused Docker image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
   }
