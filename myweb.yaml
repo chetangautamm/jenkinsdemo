@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: chetangautamm/repo:latest
+      - image: chetangautamm/repo:19
         imagePullPolicy: Always
         name: myweb
 
